@@ -1,7 +1,19 @@
 html {
-    --dark-black: #111;
-    --dark-grey: #444;
-    --light-grey: #AAA;
-    --light-background: #efefef;
+    --dark-grey: #2C3133;
+    --mid-grey: #474F51;
+    --light-grey: #6B7476;
+    --light-background: #FAFBFB;
+
+    --dark-blue: #02445D;
+    --mid-blue: #037DA5;
+    --light-blue: #0890BA;
+    --blue-background: #9DE5FB;
+
+    --ligth-red: #FC5448;
+    --dark-red: #510B07;
+}
+
+body {
+    background-color: var(--light-background);
 }
 
