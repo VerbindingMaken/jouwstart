@@ -9,8 +9,11 @@ html {
     --light-blue: #0890BA;
     --blue-background: #9DE5FB;
 
-    --ligth-red: #FC5448;
-    --dark-red: #510B07;
+    --ligth-red: #F44720;
+    --dark-red: #3C0601;
+
+    --svg-red: #A72837;
+    --svg-yellow: #FCC81D;
 }
 
 body {

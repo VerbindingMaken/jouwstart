@@ -86,8 +86,14 @@ button {
     padding: .6rem 0 .6rem 0;
     border-radius: 3rem;
     border: none;
-    background-color: var(--ligth-red);
-    color: var(--dark-red);
+    background-color: var(--svg-red);
+    color: white;
+    transition: all 0.3s ease-out;
+}
+button:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 2px 4px var(--dark-grey);
+    background-color: #BE2E3E;
 }
 
 /* Interaction */
