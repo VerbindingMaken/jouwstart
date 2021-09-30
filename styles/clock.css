@@ -1,0 +1,80 @@
+html {
+    --clock-size: 200px;
+}
+
+#clock-size {
+    width: 100%;
+}
+
+#clock-app {
+    grid-row: 3/ 4;
+    grid-column: 7/ 12;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+
+#dial {
+    margin-top: 2em;
+    position: relative;
+    box-sizing: content-box;
+    width: var(--clock-size);
+    height: var(--clock-size);
+    border-radius: 50%;
+    border: solid hsl(var(--mid-blue));
+    border-width: calc(var(--clock-size) / 25);
+    background-color: hsl(var(--blue-background));
+}
+
+#axel {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: calc(var(--clock-size) / 100 * 4);
+    height: calc(var(--clock-size) / 100 * 4);
+    translate: calc(var(--clock-size) / 100 * -2) calc(var(--clock-size) / 100 * -2);
+    border-radius: 50%;
+    background-color: hsl(var(--dark-blue));
+}
+
+#second-hand {
+    position: absolute;
+    top: 50%;
+    width: calc(var(--clock-size) / 100 * 46);
+    height: calc(var(--clock-size) / 100);
+    translate: calc(var(--clock-size) / 100 * 4) calc(var(--clock-size) / 100 * -.5);
+    transform-origin: right;
+    background-color: hsl(var(--dark-blue));
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+    transform: rotate(160deg);
+}
+
+#minute-hand {
+    position: absolute;
+    top: 50%;
+    width: calc(var(--clock-size) / 100 * 46);
+    height: calc(var(--clock-size) / 100 * 2);
+    translate: calc(var(--clock-size) / 100 * 4) calc(var(--clock-size) / 100 * -1);
+    transform-origin: right;
+    background-color: hsl(var(--dark-blue));
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+    transform: rotate(30deg);
+}
+
+#hour-hand {
+    position: absolute;
+    top: 50%;
+    width: calc(var(--clock-size) / 100 * 32);
+    height: calc(var(--clock-size) / 100 * 2);
+    translate: calc(var(--clock-size) / 100 * 18) calc(var(--clock-size) / 100 * -1);
+    transform-origin: right;
+    background-color: hsl(var(--dark-blue));
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    transform: rotate(220deg);
+}
+

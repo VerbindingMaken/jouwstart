@@ -1,22 +1,31 @@
 html {
-    --dark-grey: #2C3133;
-    --mid-grey: #474F51;
-    --light-grey: #6B7476;
-    --light-background: #FAFBFB;
+    --dark-grey:  196, 7%, 19%;
+    --mid-grey:  192, 7%, 30%;
+    --light-grey: 191, 5%, 44%;
+    --light-background: 180, 11%, 98%;
 
-    --dark-blue: #02445D;
-    --mid-blue: #037DA5;
-    --light-blue: #0890BA;
-    --blue-background: #9DE5FB;
+    --opac-eight: 0.8;
+    --opac-six: 0.6;
+    --opac-four: 0.4;
+    --opac-two: 0.2;
 
-    --ligth-red: #F44720;
-    --dark-red: #3C0601;
+    --dark-blue: 196, 96%, 19%;
+    --mid-blue: 195, 96%, 33%;
+    --light-blue: 194, 92%, 38%;
+    --blue-background: 194, 92%, 80%;
 
-    --svg-red: #A72837;
-    --svg-yellow: #FCC81D;
+    --ligth-red:  11 , 90%, 54%;
+    --dark-red:  5, 97%, 12%;
+
+    --svg-red:   353, 61%, 41%;
+    --svg-redhighlight: 353, 61%, 46%;
+    --svg-yellow:  46, 97%, 55%;
+
+    --color-shift: 0deg;
 }
 
 body {
-    background-color: var(--light-background);
+    background-color: hsl(var(--light-background));
+    filter: hue-rotate(var(--color-shift));
 }
 
