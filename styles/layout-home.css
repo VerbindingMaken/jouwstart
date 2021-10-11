@@ -1,0 +1,217 @@
+#content {
+    margin: 0 5vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 3vh 4vw;
+    min-height: 10vh;
+}
+
+/* Phone */
+
+#start-title {
+    grid-row: 2 / 3;
+    grid-column: 1/ 13;
+}
+#heading-p-one {
+    grid-row: 3/ 4;
+    grid-column: 1/ 5;
+}
+#heading-clock {
+    grid-row: 3/ 4;
+    grid-column: 9/ 13;
+}
+#p-one {
+    grid-row: 4/ 5;
+    grid-column: 1/ 5;
+}
+#p-two {
+    grid-row: 4/ 5;
+    grid-column: 5/ 9;
+}
+
+#clock-container {
+    grid-row: 4/ 5;
+    grid-column: 9/ 13;
+}
+#video-section {
+    grid-row: 6/ 7;
+    grid-column: 1/ 13;
+    height: 100%;
+    display: grid;
+    align-content: center;
+}
+#video-container {
+    padding-top: 56.25%;
+    background-color: hsl(var(--light-background));
+    position: relative;
+}
+#video-container iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Mobile */
+#content {
+    margin: 0 5vh;
+}
+#start-title {
+    grid-row: 2 / 3;
+    grid-column: 1/ 13;
+}
+#heading-p-one {
+    grid-row: 3/ 4;
+    grid-column: 1/ 13;
+}
+#p-one {
+    grid-row: 4/ 5;
+    grid-column: 1/ 13;
+}
+#p-two {
+    grid-row: 6/ 7;
+    grid-column: 1/ 13;
+}
+#heading-clock {
+    text-align: center;
+    grid-row: 7/ 8;
+    grid-column: 1/ 13;
+}
+#clock-container {
+    grid-row: 8/ 9;
+    grid-column: 1/ 13;
+}   
+#show-start-container {
+    grid-row: 9/ 10;
+    grid-column: 1/ 13;
+    display: flex;
+    justify-content: center;
+}   
+#heading-p-three {
+    grid-row: 10/ 11;
+    grid-column: 1/ 13;
+}    
+#p-three {
+    grid-row: 12/ 13;
+    grid-column: 1/ 13;
+}    
+#video-section {
+    grid-row: 13/ 14;
+    grid-column: 1/ 13;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    margin-bottom: 4vh;
+}   
+#video-container {
+    padding-top: 56.25%;
+    background-color: hsl(var(--light-background));
+    position: relative;
+}    
+#video-container iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}    
+    
+    
+
+/* PC and Laptop */
+
+@media (min-width: 1008px) { 
+        #content {
+        margin: 0 10vh;
+        }
+        #start-title {
+            grid-row: 2 / 3;
+            grid-column: 1/ 13;
+        }
+        #heading-p-one {
+            grid-row: 3/ 4;
+            grid-column: 1/ 5;
+        }
+        #heading-clock {
+            grid-row: 3/ 4;
+            grid-column: 9/ 13;
+        }
+        #p-one {
+            grid-row: 4/ 5;
+            grid-column: 1/ 5;
+        }
+        #p-two {
+            grid-row: 4/ 5;
+            grid-column: 5/ 9;
+        }
+        #clock-container {
+            grid-row: 4/ 5;
+            grid-column: 9/ 13;
+        }
+        #show-start-container {
+            grid-row: 5/ 6;
+            grid-column: 9/ 13;
+        }
+        #heading-p-three {
+            grid-row: 6/ 7;
+            grid-column: 1/ 5;
+        }
+        #p-three {
+            grid-row: 7/ 8;
+            grid-column: 1/ 5;
+        }
+        #video-section {
+            grid-row: 7/8;
+            grid-column: 5/ 13;
+        }
+ }
+
+ /* Tablets */
+
+ @media (min-width: 641px) and (max-width: 1007px) {
+        #content {
+        margin: 0 10vh;
+        }
+        #start-title {
+            grid-row: 2 / 3;
+            grid-column: 1/ 13;
+        }
+        #heading-p-one {
+            grid-row: 3/ 4;
+            grid-column: 1/ 7;
+        }
+        #p-one {
+            grid-row: 4/ 5;
+            grid-column: 1/ 7;
+        }
+        #p-two {
+            grid-row: 5/ 6;
+            grid-column: 1/ 7;
+        }
+        #heading-clock {
+            grid-row: 3/ 4;
+            grid-column: 7/ 13;
+        }    
+        #clock-container {
+            grid-row: 4/ 6;
+            grid-column: 7/ 13;
+        }
+        #show-start-container {
+            grid-row: 6/ 7;
+            grid-column: 7/ 13;
+        }
+        #heading-p-three {
+            grid-row: 7/ 8;
+            grid-column: 1/ 7;
+        }
+        #p-three {
+            grid-row: 8/ 9;
+            grid-column: 1/ 7;
+        }
+        #video-section {
+            grid-row: 8/ 9;
+            grid-column: 7/ 13;
+        }
+ }

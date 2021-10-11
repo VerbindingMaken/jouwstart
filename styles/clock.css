@@ -1,5 +1,5 @@
 html {
-    --clock-size: 200px;
+    --clock-size: 12em;
 }
 
 #clock-size {
@@ -16,7 +16,6 @@ html {
 
 
 #dial {
-    margin-top: 2em;
     position: relative;
     box-sizing: content-box;
     width: var(--clock-size);

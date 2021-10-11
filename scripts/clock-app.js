@@ -61,6 +61,12 @@ function showTime() {
 setInterval(showTime, 1000);
 
 // CHANGE SIZE APP
+/* HTML:
+
+<label for="size">Pas grootte van klok aan:</label>
+<input id="clock-size" name="size" type="range" min="100" max="300">
+*/
+
 
 // Select range slider
 const clockSlider = document.querySelector('#clock-size');

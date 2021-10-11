@@ -1,9 +1,9 @@
 html {
-	font-size: calc(1em + .4vw);
+	font-size: calc(.8em + .4vw);
 }
 body {
 	font-family: 'Work Sans', Verdana, sans-serif;
-	color: hsl(var(--dark-grey));
+	color: hsl(var(--mid-grey));
 }
 
 #logo {
@@ -37,12 +37,16 @@ h2 {
 p {
 	font-weight: 400;
 	font-size: 1em;
-	color: hsl(var(--mid-grey));
 	line-height: 1.7;
 }
 p a {
 	color: hsl(var(--mid-blue));
 	font-weight: 600;
+}
+p a:hover {
+	color: hsl(var(--light-blue));
+	text-decoration: underline 1.5px hsl(var(--light-blue));
+    text-underline-offset: 4px;
 }
 button {
 	font-weight: 400;
