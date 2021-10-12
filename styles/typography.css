@@ -31,6 +31,7 @@ h2 {
 	font-weight: 600;
 	font-size: 1.6em;
 	color: hsl(var(--dark-blue));
+	margin-top: 2em;
 	margin-bottom: .7rem;
 }
 
@@ -38,6 +39,7 @@ p {
 	font-weight: 400;
 	font-size: 1em;
 	line-height: 1.7;
+	margin-bottom: 1em;
 }
 p a {
 	color: hsl(var(--mid-blue));
