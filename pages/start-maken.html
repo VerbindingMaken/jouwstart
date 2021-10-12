@@ -8,13 +8,12 @@
     <meta name="author" content="Thomas den Oude">
     <meta name="description" content="Practice website - 30 Javascript challenge">
 
-    <link rel="stylesheet" type="text/css" href="styles/index.css">
-    <link rel="stylesheet" type="text/css" href="styles/layout-home.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
+    <link rel="stylesheet" type="text/css" href="../styles/layout-start-maken.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&family=Work+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <script src="scripts/index.js" defer="defer"></script>
-    <script src="scripts/clock-app.js" defer="defer"></script>
+    <script src="../index.js" defer="defer"></script>
 </head>
 
 <body>
@@ -38,13 +37,21 @@
         </nav>
         <nav id="main-menu">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Start maken</a></li>
-                <li><a href="">Achtergrond</a></li>
-                <li><button id="adjust-text"><span id="small-a">A</span>A<span id="larg-a">A</span><span id="night-a">A</span></button></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="start-maken.html">Start maken</a></li>
+                <li><a href="achtergrond.html">Achtergrond</a></li>
+                <li><button id="adjust-text">
+                    <div id="letter-container">
+                        <span id="small-a">A</span>
+                        <span id="middle-a">A</span>
+                        <span id="large-a">A</span>
+                        <div id="night-a-container">
+                            <span id="night-a">A</span></button></li>
+                        </div>
+                        
+                    </div>       
             </ul>
         </nav>
-
     </header>
     <main id="content">
         <h1 id="start-title">Dit is jouw start!</h1>
