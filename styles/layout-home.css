@@ -1,5 +1,5 @@
 #content {
-    margin: 0 5vh;
+    margin: 0 5vw;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
@@ -55,9 +55,6 @@
 }
 
 /* Mobile */
-#content {
-    margin: 0 5vh;
-}
 #start-title {
     grid-row: 2 / 3;
     grid-column: 1/ 13;
@@ -123,9 +120,6 @@
 /* PC and Laptop */
 
 @media (min-width: 1008px) { 
-        #content {
-        margin: 0 10vh;
-        }
         #start-title {
             grid-row: 2 / 3;
             grid-column: 1/ 13;
@@ -171,9 +165,6 @@
  /* Tablets */
 
  @media (min-width: 641px) and (max-width: 1007px) {
-        #content {
-        margin: 0 10vh;
-        }
         #start-title {
             grid-row: 2 / 3;
             grid-column: 1/ 13;

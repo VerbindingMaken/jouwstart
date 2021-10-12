@@ -9,11 +9,11 @@ body {
 }
 
 #header {   
-    margin: 0 10vh 4vh 10vh; 
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
+    margin: 0 5vw 4vh 5vw; 
     padding: 3vh 0;  
 }
 #logo-container {    
@@ -134,9 +134,6 @@ body {
     color: hsl(var(--mid-blue));
 }
 @media (max-width: 640px) {
-    #header {   
-        margin: 0 5vh 4vh 5vh; 
-    }
     #menu-link {
         display: block;
     }
@@ -144,7 +141,7 @@ body {
         display: none;
     }
 }
-@media (max-width: 1007px) {
+@media (min-width: 641px) and (max-width: 1007px) {
     #menu-link {
         display: block;
     }
@@ -160,7 +157,7 @@ body {
         display: block;
     }
 }
-/* CONTENT */
+
 
 
 
