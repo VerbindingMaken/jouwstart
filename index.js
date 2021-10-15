@@ -1,3 +1,13 @@
+const adjustTextButton = document.querySelector('#adjust-text');
+const showPopMenuButton = document.querySelector('#show-pop-menu');
+
+function showPopMenu(e) {
+    console.log(e)
+}
+
+
+
+
 // CHANGE COLOR slider
 /*
 // GET ROOT ELEMENT
