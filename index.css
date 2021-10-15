@@ -66,21 +66,7 @@ body {
     text-decoration: underline 2px hsl(var(--mid-blue));
     text-underline-offset: 8px;
 }
-#adjust-text {
-    background-color: inherit;
-    font-size: inherit;
-    border-radius: .5em;
-    border-color: hsl(var(--mid-grey));
-    transition: all 0.3s ease-out;
-    box-shadow: .6px 1.2px 1.2px hsla(var(--light-grey), var(--opac-eight));
-}
-#adjust-text:hover {
-    transform: scale(1.04);
-    box-shadow: 
-        1px 2px 2px hsla(var(--dark-grey), var(--opac-two)),
-        2px 4px 4px hsla(var(--dark-grey), var(--opac-two)),
-        3px 6px 6px hsla(var(--dark-grey), var(--opac-two));
-}
+
 #letter-container {
     margin: .3em .4em;
     display: flex;
@@ -109,10 +95,8 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-#show-menu {
-    border: none;
-    background-color: inherit;
+/* Mobile and Tablet Menu Button */
+#show-pop-menu {
     display: flex;
     align-items: center;
 }
@@ -133,6 +117,97 @@ body {
 #show-menu:hover {
     color: hsl(var(--mid-blue));
 }
+/* POP MENU */
+#pop-menu-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(var(--dark-blue));
+    padding: 3vh 3vw;
+}
+#pop-menu-background {
+    width: 100%;
+    min-height: 94vh;
+    background-color: hsl(var(--light-background));
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+#go-back-container {
+    height: 2em;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2vw;
+    margin-bottom: 4vh;
+}
+#go-back {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#close-x {
+    position: relative;
+    margin-left: .6em;
+    height: 1.6em;
+    width: 1.6em;
+}
+.crossbar {
+    position: absolute;
+    transform-origin: center;
+    top: calc(50% - .15em);
+    height: .3em;
+    width: 100%;
+    border-radius: .06em;
+    background-color: hsl(var(--svg-red));
+}
+#crossbar-one {
+    transform: rotate(45deg);
+}
+#crossbar-two {
+    transform: rotate(-45deg);
+}
+
+#center-container {
+    margin: 0 2vw;
+    min-width: 50vw;
+}
+#pop-menu {
+    margin-bottom: 3em;
+}
+#pop-menu ul li {
+    margin-bottom: 1em;
+}
+#adjust-text fieldset {
+    font-size: calc(.8em + .4vw);
+    margin-top: 1em;
+    padding: 2vh 0 4vh 0;
+    border: none;
+    border-bottom: 2px solid hsl(var(--svg-red));
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2em;
+}
+#adjust-text input {
+    height: 3.6rem;
+    padding: 0 1rem;
+    border-radius: .5rem;
+}
+#smaller {
+    font-size: .8em;
+}
+#middle {
+    font-size: 1em;
+}
+#larger {
+    font-size: 1.6em
+}
+
+
 @media (max-width: 640px) {
     #menu-link {
         display: block;
@@ -148,6 +223,11 @@ body {
     #main-menu {
         display: none;
     }
+    #adjust-text fieldset {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.6em;
+    }
 }
 @media (min-width: 1008px) { 
     #menu-link {
@@ -156,12 +236,18 @@ body {
     #main-menu {
         display: block;
     }
+    #adjust-text fieldset {
+        flex-direction: row;
+        align-items: center;
+        gap: 4em;
+    }
+
 }
 
 
 
 
-/* Styling of elements */
+/* Styling of BUTTONS */
 .call-to-action {
     margin: 2vh 0 10vh 0;
     padding: .3em .6em;
@@ -180,7 +266,29 @@ body {
     background-color: hsl(var(--svg-redhighlight));
 }
 
-/* Interaction */
-.second {
-    display: none;
+.no-style {
+    border: none;
+    background-color: inherit;
+}
+.black-white {
+    background-color: inherit;
+    font-size: inherit;
+    min-height: 2em;
+    border-radius: .5em;
+    border-color: hsl(var(--mid-grey));
+    transition: all 0.3s ease-out;
+    box-shadow: .6px 1.2px 1.2px hsla(var(--light-grey), var(--opac-eight));
+}
+.black-white:hover,
+.dark:hover {
+    transform: scale(1.04);
+    box-shadow: 
+        1px 2px 2px hsla(var(--dark-grey), var(--opac-two)),
+        2px 4px 4px hsla(var(--dark-grey), var(--opac-two)),
+        3px 6px 6px hsla(var(--dark-grey), var(--opac-two));
+}
+.dark {
+    border: none;
+    background-color: hsl(var(--mid-grey));
+    color: white;
 }

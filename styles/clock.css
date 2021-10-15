@@ -28,7 +28,6 @@ html {
 
 #axel {
     position: absolute;
-    z-index: 1;
     top: 50%;
     left: 50%;
     width: calc(var(--clock-size) / 100 * 4);

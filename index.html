@@ -19,6 +19,41 @@
 </head>
 
 <body>
+    <div id="pop-menu-container">
+        <div id="pop-menu-background">
+            <div id="go-back-container">
+                <button id="go-back" class="no-style">Sluit<div id="close-x">
+                    <div id="crossbar-one" class="crossbar"></div>
+                    <div id="crossbar-two" class="crossbar"></div>
+                </div></button>
+            </div>
+            <div id="center-container">
+                <nav id="pop-menu">
+                    <ul>
+                        <li><button class="no-style">Home</button></li>
+                        <li><button class="no-style">Start maken</button></li>
+                        <li><button class="no-style">Achtergrond</button></li>
+                    </ul>
+                </nav>
+                <from id="adjust-text" name="adjust-text">
+                    <label for="adjust-text"><h2>Pas de tekst aan:</h2></label>
+                    <fieldset id="adjust-text-size" name="adjust-text-size">
+                        <input id="smaller" type="button" class="black-white" value="Klein maken">
+                        <label id="text-size-label" for="adjust-text-size">Letters zijn middelgroot</label>
+                        <input id="middle" type="button" class="black-white" value="Middelgroot maken" style="display: none;" >
+                        <input id="larger" type="button" class="black-white" value="Groot maken">
+                    </fieldset>
+                    <fieldset id="adjust-light-dark" name="adjust-light-dark">
+                        <input id="light" type="button" class="black-white" value="Licht maken" style="display: none;">
+                        <label id="adjust-light-dark-label" for="adjust-light-dark">Achtergrond is licht</label>
+                        <input id="dark" type="button" class="dark" value="Donker maken">
+
+                    </fieldset>
+
+                </from>
+            </div>
+        </div>
+    </div>
     <header id="header">
         <div id="logo-container">
             <div id="logo">
@@ -29,7 +64,7 @@
             </div>
         </div>
         <nav id="menu-link">
-            <button id="show-menu">Menu
+            <button id="show-pop-menu" class="no-style">Menu
                 <div id="menu-icon">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -43,7 +78,7 @@
                 <li><a href="pages/start-maken.html">Start maken</a></li>
                 <li><a href="pages/achtergrond.html">Achtergrond</a></li>
                 <li><button id="adjust-text">
-                    <div id="letter-container">
+                    <div id="letter-container" class="black-white">
                         <span id="small-a">A</span>
                         <span id="middle-a">A</span>
                         <span id="large-a">A</span>
