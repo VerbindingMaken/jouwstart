@@ -29,3 +29,9 @@ body {
     filter: hue-rotate(var(--color-shift));
 }
 
+
+@media screen and (prefers-color-scheme: dark) {
+    
+    
+}
+
