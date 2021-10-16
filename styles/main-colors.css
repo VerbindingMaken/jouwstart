@@ -1,6 +1,7 @@
 html {
     --dark-grey:  196, 7%, 19%;
     --mid-grey:  192, 7%, 30%;
+    --font-grey: 192, 7%, 30%;
     --light-grey: 191, 5%, 44%;
     --light-background: 180, 11%, 98%;
 
@@ -14,12 +15,8 @@ html {
     --light-blue: 194, 92%, 38%;
     --blue-background: 194, 92%, 80%;
 
-    --ligth-red:  11 , 90%, 54%;
-    --dark-red:  5, 97%, 12%;
-
     --svg-red:   353, 61%, 41%;
     --svg-redhighlight: 353, 61%, 46%;
-    --svg-yellow:  46, 97%, 55%;
 
     --color-shift: 0deg;
 }
@@ -30,8 +27,27 @@ body {
 }
 
 
-@media screen and (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
+    html {
+        --dark-grey:  180, 11%, 98%;
+        --mid-grey:  191, 5%, 44%;
+        --font-grey: 180, 11%, 98%;
+        --light-grey: 192, 7%, 30%;;
+        --light-background: 196, 7%, 19%;
     
+        --opac-eight: 0.8;
+        --opac-six: 0.6;
+        --opac-four: 0.4;
+        --opac-two: 0.2;
+    
+        --dark-blue: 194, 92%, 80%;
+        --mid-blue: 194, 92%, 38%;
+        --light-blue: 195, 96%, 33%;
+        --blue-background: 196, 96%, 19%;
+    
+        --svg-red: 353, 61%, 46%;
+        --svg-redhighlight: 353, 61%, 41%;
+    }
     
 }
 

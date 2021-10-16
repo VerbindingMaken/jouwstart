@@ -3,7 +3,7 @@ html {
 }
 body {
 	font-family: 'Work Sans', Verdana, sans-serif;
-	color: hsl(var(--mid-grey));
+	color: hsl(var(--font-grey));
 }
 
 #logo {
