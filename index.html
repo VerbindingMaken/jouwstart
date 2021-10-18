@@ -1,138 +1,141 @@
-<!DOCTYPE html> 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-
-    <title>Motivatie</title>
-
-    <meta name="author" content="Thomas den Oude">
-    <meta name="description" content="Practice website - 30 Javascript challenge">
-
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="styles/layout-home.css">
-    <link rel="stylesheet" type="text/css" href="styles/clock.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&family=Work+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <script src="index.js" defer="defer"></script>
-    <script src="scripts/clock-app.js" defer="defer"></script>
-</head>
-
-<body>
-    <div id="pop-menu-container" style="display: none;">
-        <div id="pop-menu-background">
-            <div id="go-back-container">
-                <button id="go-back" class="no-style">Sluit<div id="close-x">
-                    <div id="crossbar-one" class="crossbar"></div>
-                    <div id="crossbar-two" class="crossbar"></div>
-                </div></button>
-            </div>
-            <div id="center-container">
-                <nav id="pop-nav">
-                    <ul>
-                        <li><button class="nav-button no-style" data-url="index.html">Home</button></li>
-                        <li><button class="nav-button no-style" data-url="pages/start-maken.html">Start maken</button></li>
-                        <li><button class="nav-button no-style" data-url="pages/achtergrond.html">Achtergrond</button></li>
-                    </ul>
-                </nav>
-                <from id="adjust-text-form" name="adjust-text">
-                    <label for="adjust-text"><h2>Pas de tekst aan:</h2></label>
-                    <fieldset id="adjust-text-size" name="adjust-text-size">
-                        <input id="smaller" type="button" class="black-white" value="Klein maken">
-                        <label id="text-size-label" for="adjust-text-size">Letters zijn middelgroot</label>
-                        <input id="middle" type="button" class="black-white" value="Middelgroot maken" style="display: none;" >
-                        <input id="larger" type="button" class="black-white" value="Groot maken">
-                    </fieldset>
-                    <fieldset id="adjust-light-dark" name="adjust-light-dark">
-                        <input id="light" type="button" class="black-white" value="Licht maken" style="display: none;">
-                        <label id="adjust-light-dark-label" for="adjust-light-dark">Achtergrond is licht</label>
-                        <input id="dark" type="button" class="dark" value="Donker maken">
-
-                    </fieldset>
-
-                </from>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+    
+        <title>Motivatie</title>
+    
+        <meta name="author" content="Thomas den Oude">
+        <meta name="description" content="Practice website - 30 Javascript challenge">
+    
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="styles/layout-home.css">
+        <link rel="stylesheet" type="text/css" href="styles/clock.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&family=Work+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+        <script src="index.js" defer="defer"></script>
+        <script src="scripts/clock-app.js" defer="defer"></script>
+    </head>
+    
+    <body>
+        <div id="pop-menu-container" style="display: none;">
+            <div id="pop-menu-background">
+                <div id="go-back-container">
+                    <button id="go-back" class="no-style">Sluit<div id="close-x">
+                        <div id="crossbar-one" class="crossbar"></div>
+                        <div id="crossbar-two" class="crossbar"></div>
+                    </div></button>
+                </div>
+                <div id="center-container">
+                    <nav id="pop-nav">
+                        <ul>
+                            <li><button class="nav-button no-style" data-url="index.html">Home</button></li>
+                            <li><button class="nav-button no-style" data-url="pages/start-maken.html">Start maken</button></li>
+                            <li><button class="nav-button no-style" data-url="pages/achtergrond.html">Achtergrond</button></li>
+                        </ul>
+                    </nav>
+                    <from id="adjust-text-form" name="adjust-text">
+                        <label for="adjust-text"><h2>Pas de tekst aan:</h2></label>
+                        <fieldset id="adjust-text-size" name="adjust-text-size">
+                            <input id="smaller" type="button" class="black-white" value="Klein maken">
+                            <label id="text-size-label" for="adjust-text-size">Letters zijn middelgroot</label>
+                            <input id="middle" type="button" class="black-white" value="Middelgroot maken" style="display: none;" >
+                            <input id="larger" type="button" class="black-white" value="Groot maken">
+                        </fieldset>
+                        <fieldset id="adjust-light-dark" name="adjust-light-dark">
+                            <input id="light" class="light" type="button" class="black-white" value="Licht maken" style="display: none;">
+                            <label id="adjust-light-dark-label" for="adjust-light-dark">Achtergrond is licht</label>
+                            <input id="dark" class="dark" type="button"  value="Donker maken">
+    
+                        </fieldset>
+    
+                    </from>
+                </div>
             </div>
         </div>
-    </div>
-    <header id="header">
-        <a id="logo-container" href="index.html">
-            <div id="logo">
-                <div id="logo-image">
-                    <div id="logo-text">JS</div>
-                </div>
-                <div id="logo-full-text">Jouw Start</div>
-            </div>
-        </a>
-        <nav id="menu-link">
-            <button id="show-pop-menu" class="no-style">Menu
-                <div id="menu-icon">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </button>
-        </nav>
-        <nav id="main-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/start-maken.html">Start maken</a></li>
-                <li><a href="pages/achtergrond.html">Achtergrond</a></li>
-                <li><button id="adjust-text" class="black-white">
-                    <div id="letter-container" >
-                        <span id="small-a">A</span>
-                        <span id="middle-a">A</span>
-                        <span id="large-a">A</span>
-                        <div id="night-a-container">
-                            <span id="night-a">A</span></button></li>
-                        </div>
-                        
-                    </div>       
-            </ul>
-        </nav>
-
-    </header>
-    <main id="content">
-        <h1 id="start-title">Wat is jouw talent?</h1>
-        <h2 id="heading-p-one">Begin bij het begin</h2>
-        <p id="p-one">
-            Wat doe jij graag als je even niets hoeft? Wat vind je leuk om te leren? Dat zijn de dingen waar jij goed in bent! Of heel goed in kan worden.
-        </p>
-        <p id="p-two">
-            Vind je het moeilijk om van jouw hobbie je vak te maken? Geen probleem, we helpen je graag op weg. Met ons eenvoudige stappenplan brengen we jouw dromen dichterbij.
-        </p>
-        <h2 id="heading-clock">Waneer begin jij?</h2>
-        <div id="clock-container">
-            <div id="clock-app">
-                <div id="clock-body">
-                    <div id="dial">
-                        <div id="axel"></div>
-                        <div id="second-hand"></div>
-                        <div id="minute-hand"></div>
-                        <div id="hour-hand"></div>
+        <header id="header">
+            <a id="logo-container" href="index.html">
+                <div id="logo">
+                    <div id="logo-image">
+                        <div id="logo-text">JS</div>
                     </div>
-                </div>            
-            </div>  
-        </div>
-        <div id="show-start-container">
-            <button id="show-start" class="call-to-action">Maak een start</button>
-        </div> 
-        <h2 id="heading-p-three">Inspiratie</h2>
-        <p id="p-three">
-            Deze mooie video van de Universiteit laat zien hoe belangrijk motivatie is. Leren begint als jij plezier hebt! Dat geldt voor kinderen, maar ook voor jou! Wil je meer begrijpen hoe motivatie werkt? Lees dan meer over <a href="pages/achtergrond.html">de achtergrond van motivatie</a>.
-        </p>
-       
-        <div id="video-section">
-            <div id="video-container">
-                <iframe width="1110" height="624" src="https://www.youtube.com/embed/jiqXhIuNmuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div id="logo-full-text">Jouw Start</div>
+                </div>
+            </a>
+            <nav id="menu-link">
+                <button id="show-pop-menu" class="no-style">Menu
+                    <div id="menu-icon">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </button>
+            </nav>
+            <nav id="main-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/start-maken.html">Start maken</a></li>
+                    <li><a href="pages/achtergrond.html">Achtergrond</a></li>
+                    <li><button id="adjust-text" class="black-white">
+                        <div id="letter-container" >
+                            <span id="small-a">A</span>
+                            <span id="middle-a">A</span>
+                            <span id="large-a">A</span>
+                            <div id="night-a-container">
+                                <span id="night-a">A</span></button></li>
+                            </div>
+                            
+                        </div>       
+                </ul>
+            </nav>
+    
+        </header>
+        <main id="content">
+            <h1 id="start-title">Wat is jouw talent?</h1>
+            <h2 id="heading-p-one">Begin bij het begin</h2>
+            <p id="p-one">
+                Wat doe jij graag als je even niets hoeft? Wat vind je leuk om te leren? Dat zijn de dingen waar jij goed in bent! Of heel goed in kan worden.
+            </p>
+            <p id="p-two">
+                Vind je het moeilijk om van jouw hobbie je vak te maken? Geen probleem, we helpen je graag op weg. Met ons eenvoudige stappenplan brengen we jouw dromen dichterbij.
+            </p>
+            <h2 id="heading-clock">Waneer begin jij?</h2>
+            <div id="clock-container">
+                <div id="clock-app">
+                    <div id="clock-body">
+                        <div id="dial">
+                            <div id="axel"></div>
+                            <div id="second-hand"></div>
+                            <div id="minute-hand"></div>
+                            <div id="hour-hand"></div>
+                        </div>
+                    </div>            
+                </div>  
             </div>
-        </div>
-        
-    </main>
-    <footer id="footer">
-        <div id="footer-menu"></div>
-        <div id="contact"></div>
-    </footer>
-</body>
+            <div id="show-start-container">
+                <button id="show-start" class="call-to-action">Maak een start</button>
+            </div> 
+            <h2 id="heading-p-three">Inspiratie</h2>
+            <p id="p-three">
+                Deze mooie video van de Universiteit laat zien hoe belangrijk motivatie is. Leren begint als jij plezier hebt! Dat geldt voor kinderen, maar ook voor jou! Wil je meer begrijpen hoe motivatie werkt? Lees dan meer over <a href="pages/achtergrond.html">de achtergrond van motivatie</a>.
+            </p>
+           
+            <div id="video-section">
+                <div id="video-container">
+                    <iframe width="1110" height="624" src="https://www.youtube.com/embed/jiqXhIuNmuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+        </main>
+        <footer id="footer">
+            <div id="footer-menu"></div>
+            <div id="contact"></div>
+        </footer>
+    </body>
+</html> 
+
 
 
 

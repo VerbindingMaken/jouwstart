@@ -41,6 +41,8 @@ body {
     justify-content: center;
     align-content: center;
 }
+/* MAIN MENU */
+
 #main-menu ul {
     display: flex;
     flex-flow: row wrap;
@@ -86,9 +88,9 @@ body {
     height: 1.6em;
     width: 1.6em;
     border-radius: .5em;
-    background-color: hsl(var(--mid-grey));
+    background-color: hsl(var(--dark-grey));
     font-size: 1.1em;
-    color: white;
+    color: hsl(var(--light-background));
     margin-left: .8em;
     display: flex;
     flex-flow: row wrap;
@@ -288,15 +290,17 @@ body {
     box-shadow: .6px 1.2px 1.2px hsla(var(--light-grey), var(--opac-eight));
 }
 .black-white:hover,
-.dark:hover {
+.dark:hover,
+.light:hover {
     transform: scale(1.04);
     box-shadow: 
         1px 2px 2px hsla(var(--dark-grey), var(--opac-two)),
         2px 4px 4px hsla(var(--dark-grey), var(--opac-two)),
         3px 6px 6px hsla(var(--dark-grey), var(--opac-two));
 }
-.dark {
+.dark,
+.light {
     border: none;
-    background-color: hsl(var(--mid-grey));
-    color: white;
+    background-color: hsl(var(--dark-grey));
+    color: hsl(var(--light-background));
 }

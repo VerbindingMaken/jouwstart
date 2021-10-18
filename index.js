@@ -1,4 +1,5 @@
 /* Document sections */
+const rootDoc = document.querySelector('html');
 const popMenu = document.querySelector('#pop-menu-container');
 const popNav = document.querySelector('#pop-nav');
 const header = document.querySelector('#header');
@@ -51,7 +52,7 @@ for (let i = 0; i < navButtons.length; i++) {
 }
 
 /* ADJUST TEXT SIZE */
-const rootDoc = document.querySelector('html');
+
 const smallerButton = document.querySelector('#smaller');
 const middleButton = document.querySelector('#middle');
 const largerButton = document.querySelector('#larger');
@@ -95,21 +96,52 @@ const lightButton = document.querySelector('#light');
 const darkButton = document.querySelector('#dark');
 const adjustLightDarkLabel = document.querySelector('#adjust-light-dark-label');
 
-function adjustLightDark(e) {
-    let action = e.target.getAttribute('id');
-    switch (action) {
-        case "light":
+function showLightButton() {
+    lightButton.style.display = "block";
+    darkButton.style.display = "none";
+    adjustLightDarkLabel.textContent = "Achtergrond is donker";
+}
+
+function showDarkButton() {
+    lightButton.style.display = "none";
+    darkButton.style.display = "block";
+    adjustLightDarkLabel.textContent = "Achtergrond is licht";
+}
+
+function setColorTheme() {
+    let colorTheme = localStorage.getItem("colorTheme");
+    switch (colorTheme) {
+        case "light-theme":
+            rootDoc.setAttribute('class', 'light-theme');
+            showDarkButton()
             break;
-        case "dark":
-            rootDoc.style.setProperty('--light-background', '196, 7%, 19%')
+        case "dark-theme":
+            rootDoc.setAttribute('class', 'dark-theme');
+            showLightButton();
             break;
         default:
             break;
-    }      
+    }
 }
 
-lightButton.addEventListener('click', adjustLightDark);
-darkButton.addEventListener('click', adjustLightDark);
+
+function chooseLightDark(e) {
+    let action = e.target.getAttribute('id');
+    switch (action) {
+        case "light":
+            localStorage.setItem("colorTheme", "light-theme")
+            break;
+        case "dark":
+            localStorage.setItem("colorTheme", "dark-theme")
+            break;
+        default:
+            break;
+    }
+    setColorTheme()      
+}
+
+lightButton.addEventListener('click', chooseLightDark);
+darkButton.addEventListener('click', chooseLightDark);
 
 
 
