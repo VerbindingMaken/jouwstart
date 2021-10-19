@@ -1,7 +1,253 @@
-@import url("/styles/reset.css");
-@import url("/styles/main-colors.css");
-@import url("/styles/typography.css");
+/*! RESET CSS - MIT License
 
+Copyright (c) 2019 Andy Bell and other contributors
+
+Source: Andy Piccalilli https://github.com/hankchizljaw/modern-css-reset.git */
+
+/* Box sizing rules */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:focus {
+  outline: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  color: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles 
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+} */
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* END OF RESET CSS */
+
+/* MAIN Colors Scheme */
+html {
+    --dark-grey:  196, 7%, 19%;
+    --mid-grey:  192, 7%, 30%;
+    --font-grey: 192, 7%, 30%;
+    --light-grey: 191, 5%, 44%;
+    --light-background: 180, 11%, 98%;
+
+    --opac-eight: 0.8;
+    --opac-six: 0.6;
+    --opac-four: 0.4;
+    --opac-two: 0.2;
+
+    --dark-blue: 196, 96%, 19%;
+    --mid-blue: 195, 96%, 33%;
+    --light-blue: 194, 92%, 38%;
+    --blue-background: 194, 92%, 80%;
+
+    --svg-red:   353, 61%, 41%;
+    --svg-redhighlight: 353, 61%, 46%;
+
+    --color-shift: 0deg;
+}
+html.dark-theme {
+    --dark-grey:  180, 11%, 98%;
+    --mid-grey:  191, 5%, 44%;
+    --font-grey: 180, 11%, 98%;
+    --light-grey: 192, 7%, 30%;;
+    --light-background: 196, 7%, 19%;
+
+    --opac-eight: 0.8;
+    --opac-six: 0.6;
+    --opac-four: 0.4;
+    --opac-two: 0.2;
+
+    --dark-blue: 194, 92%, 80%;
+    --mid-blue: 194, 92%, 38%;
+    --light-blue: 195, 96%, 33%;
+    --blue-background: 196, 96%, 19%;
+
+    --svg-red: 353, 61%, 46%;
+    --svg-redhighlight: 353, 61%, 41%;
+}
+
+body {
+    background-color: hsl(var(--light-background));
+    filter: hue-rotate(var(--color-shift));
+}
+
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --dark-grey:  180, 11%, 98%;
+        --mid-grey:  191, 5%, 44%;
+        --font-grey: 180, 11%, 98%;
+        --light-grey: 192, 7%, 30%;;
+        --light-background: 196, 7%, 19%;
+    
+        --opac-eight: 0.8;
+        --opac-six: 0.6;
+        --opac-four: 0.4;
+        --opac-two: 0.2;
+    
+        --dark-blue: 194, 92%, 80%;
+        --mid-blue: 194, 92%, 38%;
+        --light-blue: 195, 96%, 33%;
+        --blue-background: 196, 96%, 19%;
+    
+        --svg-red: 353, 61%, 46%;
+        --svg-redhighlight: 353, 61%, 41%;
+    }
+    html.light-theme {
+        --dark-grey:  196, 7%, 19%;
+        --mid-grey:  192, 7%, 30%;
+        --font-grey: 192, 7%, 30%;
+        --light-grey: 191, 5%, 44%;
+        --light-background: 180, 11%, 98%;
+
+        --opac-eight: 0.8;
+        --opac-six: 0.6;
+        --opac-four: 0.4;
+        --opac-two: 0.2;
+
+        --dark-blue: 196, 96%, 19%;
+        --mid-blue: 195, 96%, 33%;
+        --light-blue: 194, 92%, 38%;
+        --blue-background: 194, 92%, 80%;
+
+        --svg-red:   353, 61%, 41%;
+        --svg-redhighlight: 353, 61%, 46%;
+
+        --color-shift: 0deg;
+    }
+    
+}
+
+/* Typography */
+
+html {
+	font-size: calc(.8em + .4vw);
+}
+body {
+	font-family: 'Work Sans', Verdana, sans-serif;
+	color: hsl(var(--font-grey));
+}
+
+#logo {
+	font-family: 'Roboto Slab', Georgia, serif;
+	font-weight: 600;
+	font-size: 1.6em;
+}
+
+h1,
+h2,
+nav ul li,
+button {
+	font-family: 'Roboto Slab', Georgia, serif;
+}
+nav ul li {
+	font-weight: 400;
+	font-size: 1.2em;
+}
+h1 {
+	font-weight: 400;
+	font-size: 4.2em;
+	color: hsl(var(--light-blue));
+}
+h2 {
+	font-weight: 600;
+	font-size: 1.6em;
+	color: hsl(var(--dark-blue));
+	margin-top: 1em;
+	margin-bottom: .7rem;
+}
+
+p {
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.7;
+	margin-bottom: 1em;
+}
+p a {
+	color: hsl(var(--mid-blue));
+	font-weight: 600;
+}
+p a:hover {
+	color: hsl(var(--light-blue));
+	text-decoration: underline 1.5px hsl(var(--light-blue));
+    text-underline-offset: 4px;
+}
+button {
+	font-weight: 400;
+	font-size: 1.2em;
+}
 
 /* Main layout */
 body {
@@ -216,6 +462,7 @@ body {
     font-size: 1.6em
 }
 
+/* Make menu Responsive */
 
 @media (max-width: 640px) {
     #menu-link {
