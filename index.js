@@ -110,19 +110,27 @@ function showDarkButton() {
 
 function setColorTheme() {
     let colorTheme = localStorage.getItem("colorTheme");
-    switch (colorTheme) {
-        case "light-theme":
-            rootDoc.setAttribute('class', 'light-theme');
-            showDarkButton()
-            break;
-        case "dark-theme":
-            rootDoc.setAttribute('class', 'dark-theme');
-            showLightButton();
-            break;
-        default:
-            break;
+    if (colorTheme === "light-theme") {
+        rootDoc.setAttribute('class', 'light-theme');
+        return showDarkButton()
+    } 
+    else if (colorTheme === "dark-theme") {
+        rootDoc.setAttribute('class', 'dark-theme');
+        return showLightButton();
+    }
+    else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+        return showDarkButton()
+    }
+    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return showLightButton()
     }
 }
+setColorTheme()
+
+const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+colorSchemeQuery.addEventListener('change', setColorTheme);
+
 
 
 function chooseLightDark(e) {
