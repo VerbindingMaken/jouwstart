@@ -60,12 +60,45 @@ function showTime() {
 }
 setInterval(showTime, 1000);
 
-// CHANGE SIZE APP
+/* HOME PAGE call to action */
+const showStartButton = document.querySelector('#show-start');
+
+function showStart() {
+    window.location.href = "start-maken.html#start-maken"
+}
+
+showStartButton.addEventListener('click', showStart);
+
+
+
+
+// CHANGE COLOR slider
+/*
+// GET ROOT ELEMENT
+const r = document.querySelector(':root')
+
+HTML:
+<li><label for="color">Pas kleur aan:</label></li>
+<li><input id="color" name="color" type="range" min="0" max="360" value="0"></li>
+
+
+const colorSlider = document.querySelector('#color');
+
+function changeColor() {
+    r.style.setProperty('--color-shift', `${colorSlider.value}deg`);
+}
+
+colorSlider.addEventListener('change', changeColor);
+colorSlider.addEventListener('mousemove', changeColor);
+
+*/
+
+// CHANGE SIZE CLOCK APP
 /* HTML:
 
 <label for="size">Pas grootte van klok aan:</label>
 <input id="clock-size" name="size" type="range" min="100" max="300">
-*/
+
 
 
 // Select range slider
@@ -81,23 +114,5 @@ function changeClockSize() {
 //listen from input from slider and start function
 clockSlider.addEventListener('change', changeClockSize);
 clockSlider.addEventListener('mousemove', changeClockSize);
-/* 
-<script>
-// Get the root element
-var r = document.querySelector(':root');
 
-// Create a function for getting a variable value
-function myFunction_get() {
-  // Get the styles (properties and values) for the root
-  var rs = getComputedStyle(r);
-  // Alert the value of the --blue variable
-  alert("The value of --blue is: " + rs.getPropertyValue('--blue'));
-}
-
-// Create a function for setting a variable value
-function myFunction_set() {
-  // Set the value of variable --blue to another value (in this case "lightblue")
-  r.style.setProperty('--blue', 'lightblue');
-}
-</script>
 */

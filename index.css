@@ -191,7 +191,6 @@ body {
     text-underline-offset: 8px;
 }
 #adjust-text-form fieldset {
-    font-size: calc(.8em + .4vw);
     margin-top: 1em;
     padding: 2vh 0 4vh 0;
     border: none;

@@ -53,10 +53,13 @@ for (let i = 0; i < navButtons.length; i++) {
 
 /* ADJUST TEXT SIZE */
 
+const adjustSizeField = document.querySelector("#adjust-text-size");
 const smallerButton = document.querySelector('#smaller');
 const middleButton = document.querySelector('#middle');
 const largerButton = document.querySelector('#larger');
-const adjustSizeLabel = document.querySelector('#adjust-text-size label');
+const smallLabel = document.querySelector('#small-size-label');
+const middlelLabel = document.querySelector('#middle-size-label');
+const largelLabel = document.querySelector('#large-size-label');
 
 function adjustSize(e) {
     let action = e.target.getAttribute('id')
@@ -66,21 +69,30 @@ function adjustSize(e) {
             smallerButton.style.display = "none";
             middleButton.style.display = "block";
             largerButton.style.display = "block";
-            adjustSizeLabel.textContent = "Letters zijn klein";
+            smallLabel.style.display = "block";
+            middlelLabel.style.display = "none";
+            largelLabel.style.display = "none";
+            adjustSizeField.style.fontSize = ".95em"
             break;
         case "middle":
             rootDoc.style.setProperty('font-size', 'calc(.8em + .4vw)');
             smallerButton.style.display = "block";
             middleButton.style.display = "none";
             largerButton.style.display = "block";
-            adjustSizeLabel.textContent = "Letters zijn middelgroot";
+            smallLabel.style.display = "none";
+            middlelLabel.style.display = "block";
+            largelLabel.style.display = "none";
+            adjustSizeField.style.fontSize = "1em"
             break;
         case "larger":
             rootDoc.style.setProperty('font-size', 'calc(1em + .6vw)');
             smallerButton.style.display = "block";
             middleButton.style.display = "block";
             largerButton.style.display = "none";
-            adjustSizeLabel.textContent = "Letters zijn groot";
+            smallLabel.style.display = "none";
+            middlelLabel.style.display = "none";
+            largelLabel.style.display = "block";
+            adjustSizeField.style.fontSize = "1.05em"
             break;
         default:
             break;
@@ -150,40 +162,3 @@ function chooseLightDark(e) {
 
 lightButton.addEventListener('click', chooseLightDark);
 darkButton.addEventListener('click', chooseLightDark);
-
-
-
-
-
-/* HOME PAGE call to action */
-const showStartButton = document.querySelector('#show-start');
-
-function showStart() {
-    window.location.href = "pages/start-maken.html#start-maken"
-}
-
-showStartButton.addEventListener('click', showStart);
-
-
-
-
-// CHANGE COLOR slider
-/*
-// GET ROOT ELEMENT
-const r = document.querySelector(':root')
-
-HTML:
-<li><label for="color">Pas kleur aan:</label></li>
-<li><input id="color" name="color" type="range" min="0" max="360" value="0"></li>
-
-
-const colorSlider = document.querySelector('#color');
-
-function changeColor() {
-    r.style.setProperty('--color-shift', `${colorSlider.value}deg`);
-}
-
-colorSlider.addEventListener('change', changeColor);
-colorSlider.addEventListener('mousemove', changeColor);
-
-*/
