@@ -162,3 +162,18 @@ function chooseLightDark(e) {
 
 lightButton.addEventListener('click', chooseLightDark);
 darkButton.addEventListener('click', chooseLightDark);
+
+/* Change colors by shifting hue */
+
+const colorSlider = document.querySelector('#color-slider')
+
+function changeColor(e) {
+    document.documentElement.style.setProperty('--color-shift', `${this.value}deg`);
+}
+
+colorSlider.addEventListener('change', changeColor);
+colorSlider.addEventListener('mousemove', changeColor);
+
+
+
+
